@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="url" value="http://www.way2automation.com/angularjs-protractor/webtables/"/>
+  
+  <!--Scenario: Add a user and validate the user has been added to the table-->
+  <test thread-count="5" name="AddUser">
+  <parameter name="FirstName" value="Astha"/>
+  <parameter name="LastName" value="Pandita"/>
+  <parameter name="UserName" value="astha"/>
+  <parameter name="Role" value="Customer"/>
+  <parameter name="Email" value="asthap@gmail.com"/>
+  <parameter name="Phone" value="1234567890"/>
+  <classes>
+  	<class name="com.teladoc.challenge.testScripts.AddUserTest">  	
+  	</class>
+  </classes>
+  </test>   
+ 
+  <!--Scenario: Delete user User Name: novak and validate user has been delete-->
+  <test thread-count="5" name="DeleteUser">
+  <parameter name="UserName" value="novak"/>
+  <classes>
+  	<class name="com.teladoc.challenge.testScripts.DeleteUserTest">  	
+  	</class>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
